@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="cricketCoach" class="com.spring.core.demo.CricketCoach">
+	</bean>
+	<bean id="footBallCoach" class="com.spring.core.demo.FootBallCoach">
+		<property name="fortuneService" ref="dailyFortuneService">
+		</property>
+	</bean>
+	<bean id="tennisCoach" class="com.spring.core.demo.TennisCoach">
+		<constructor-arg ref="dailyFortuneService" />
+		<property name="fortuneService" ref="randomFortuneService"></property>
+	</bean>
+	<bean id="dailyFortuneService" class="com.spring.core.demo.DailyFortuneService">
+	</bean>
+	<bean id="randomFortuneService" class="com.spring.core.demo.RandomFortuneService">
+	</bean>
+</beans>
