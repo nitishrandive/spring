@@ -19,7 +19,7 @@ public class SpringAppDemo {
 		CricketCoach cricketCoach=  (CricketCoach) context.getBean("cricketCoach",CricketCoach.class);
 		Coach footBallCoach = context.getBean("footBallCoach",Coach.class);
 		Coach tennisCoach  =  context.getBean("tennisCoach",Coach.class);
-		System.out.println("Test from Home 1");
+		System.out.println("Test from Home 2");
 		// do some operations
 		System.out.println(cricketCoach.getCoachingAdvice());
 		System.out.println(footBallCoach.getDailyAdvice());
